@@ -18,6 +18,10 @@ Specifically, you need to:
 
       name: <project-name>
       depend: basics
+      include: .
+
+
+  You can use the `basics.agda-lib` file in this project as a reference.
 
 ***Windows Users***: instead of `~/.agda`, you should use the path
 `C:\Users\USERNAME\AppData\Roaming\agda`.
