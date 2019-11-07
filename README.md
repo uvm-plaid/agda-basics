@@ -9,7 +9,7 @@ https://agda.readthedocs.io/en/v2.5.4/tools/package-system.html
 Specifically, you need to:
 
 - Create (or add to) the Agda library index file on your system located at
-  `~/.agda` with this new line:
+  `~/.agda/libraries` with this new line:
 
       <basics-dir>/basics.agda-lib
 
