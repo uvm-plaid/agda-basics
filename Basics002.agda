@@ -111,7 +111,7 @@ record _∧_ (A B : Set) : Set where
   field
     π₁ : A
     π₂ : B
-open _∧_
+open _∧_ public
 
 -- ============== --
 -- DEPENDENT PAIR --
@@ -372,6 +372,7 @@ record 𝕋 : Set where
   field
     numᵗ : ℕ
     denᵗ : ℕ
+open 𝕋 public
 
 -- ======== --
 -- RATIONAL --
@@ -382,6 +383,7 @@ record ℚ : Set where
   field
     numᶝ : ℤ
     denᶝ : ℕ
+open ℚ public
 
 -- ===== --
 -- LISTS --
@@ -576,6 +578,7 @@ module monad-vec where
 record ℘ (A : Set) : Set where
   constructor 𝓅
   field φ : A → Set
+open ℘ public
 
 _∈_ : ∀ {A} → A → ℘ A → Set
 x ∈ 𝓅 φ = φ x
@@ -596,6 +599,7 @@ postulate
   ℝ : Set
   𝕣 : ℕ → ℝ
   _+ʳ_ : ℝ → ℝ → ℝ
+  _-ʳ_ : ℝ → ℝ → ℝ
   _×ʳ_ : ℝ → ℝ → ℝ
   _/ʳ_ : ℝ → ℝ → ℝ
   _^ʳ_ : ℝ → ℝ → ℝ
@@ -625,6 +629,7 @@ postulate
 record 𝒟 (A : Set) : Set where
   constructor 𝒹
   field ψ : A → ℝ
+open 𝒟 public
 
 Pr[_⩦_] : ∀ {A} → 𝒟 A → A → ℝ
 Pr[ 𝒹 ψ ⩦ x ] = ψ x
